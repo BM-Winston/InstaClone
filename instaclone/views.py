@@ -5,4 +5,4 @@ from django.http  import HttpResponse
 
 # Create your views here.
 def hello(request):
-    return HttpResponse('Hello there! This is InstaClone.Enjoy')
+    return render(request, 'index.html')
