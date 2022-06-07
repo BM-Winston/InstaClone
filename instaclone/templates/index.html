@@ -27,6 +27,21 @@
     
     <h1 class="text-center">Instagram</h1>
 
+    {% for image in images %}
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+        {% if image.image %}
+        <img src="{{image.image_url.url}}" class="img-responsive" alt="No image">
+        <h2>malaysia</h2>
+        {% endif %}
+    </div>
+
+
+
+
+    {% endfor %}
+
 
     {%endblock%}
 
