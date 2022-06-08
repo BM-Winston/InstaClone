@@ -4,7 +4,7 @@ from . import views
 from django.conf.urls.static import static
 
 urlpatterns=[
-    url('^$',views.hello,name = 'hello'),
+    url('^$',views.images,name = 'images'),
 ]
 
 if settings.DEBUG:
