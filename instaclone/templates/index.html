@@ -27,18 +27,24 @@
     
     <h1 class="text-center">Instagram</h1>
     
-    
+    <div class="container">
+
     {%for image in images%}
 
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-
-    
-        <img src="{{image.image.url}}" class="img-responsive" alt="No image">
-        <h2>malaysia</h2>
-        
+    <div class="col-md-4">
+        <div class="card-body">
+            <img src="{{image.image.url}}" class="img-responsive" alt="No image" style="height: 300px; width: 350px;">
+            <div class="card-text">
+                <h4>{{image.image_name}}</h4>
+                <p>{{image.image_caption}}</p>
+            </div>
+        </div>
     </div>
 
     {%endfor%}
+
+
+    </div>
 
 
     {%endblock%}
