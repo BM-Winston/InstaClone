@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -83,4 +84,22 @@ class Like(models.Model):
 
     def update_like(self, new_like):
         self.like = new_like
+        self.save()
+
+
+class Follow(models.Model):
+    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    follower = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='follower')
+
+    def __str__(self):
+        return self.user.username
+
+    def save_follow(self):
+        self.save()
+
+    def delete_follow(self):
+        self.delete()
+
+    def update_follow(self, new_follow):
+        self.follow = new_follow
         self.save()
