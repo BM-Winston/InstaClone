@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class Image(models.Model):
     image = models.ImageField(upload_to='images/', null=True)
-    image_name = models.CharField(max_length=100)
+    image_name = models.CharField(max_length=100, null=True)
     image_caption = models.TextField()
     likes = models.IntegerField(default=0)
     comments = models.IntegerField(default=0)
