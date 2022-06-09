@@ -39,7 +39,7 @@ python3 -m venv virtual - source virtual/bin/activate
  ##### Database  
   SetUp your database. Add user and password, host then make migrations. 
  ```bash 
-python manage.py makemigrations gallery
+python manage.py makemigrations instaclone
  ``` 
  Now Migrate  
  ```bash 
