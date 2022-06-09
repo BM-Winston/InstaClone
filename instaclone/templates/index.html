@@ -49,15 +49,21 @@
                         <div class="card-text">
                             <h4 style="color: white;">{{image.image_name}}</h4>
                             <p style="color: white;">{{image.image_caption}}</p>
+                           
                         </div>
 
                         <img src="{{image.image.url}}" class="img-responsive" alt="No image"
                             style="height: 300px; width: 350px;">
 
+                        <p style="color:aliceblue">{{image.likes}}, likes</p>
+
                     </div>
                 </div>
             </div>
         </div>
+
+
+        
         {%endfor%}
 
 

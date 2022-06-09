@@ -1,8 +1,11 @@
 asgiref==3.5.2
 beautifulsoup4==4.11.1
+confusable-homoglyphs==3.2.0
 Django==3.2.10
 django-bootstrap3==21.2
 django-bootstrap5==21.3
+django-crispy==1.8.1
+django-registration==3.3
 Pillow==9.1.1
 psycopg2==2.9.3
 pytz==2022.1
