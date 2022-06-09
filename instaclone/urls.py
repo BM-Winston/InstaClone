@@ -10,6 +10,7 @@ urlpatterns=[
     url('login/', views.login, name='login'),
     url('logout/', views.logout, name='logout'),
     url('account/', include('django.contrib.auth.urls')), 
+    url('add_post/', views.add_post, name='add_post'),
 ]
 
 if settings.DEBUG:

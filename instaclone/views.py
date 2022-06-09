@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from .models import Image
-from instaclone.forms import RegisterForm
+from instaclone.forms import RegisterForm, ImageForm
 from django.contrib.auth import authenticate, login, logout
 import email
 from django.http import HttpResponse
@@ -40,4 +40,16 @@ def login(request):
     return render(request,'registration/login.html')
 
 
-    
+@login_required(login_url='/accounts/login/') 
+def add_post(request):
+    if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            post=form.save(commit=False)
+            post.save()
+       
+        return redirect('images')
+    else:
+        form=ImageForm()
+
+        return render(request,'add_post.html',{'form':form} )
